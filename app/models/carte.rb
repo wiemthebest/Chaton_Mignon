@@ -1,2 +1,0 @@
-class Carte < ApplicationRecord
-end
