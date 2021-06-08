@@ -33,5 +33,5 @@ class User < ApplicationRecord
     else
       Rails.logger.fatal "[Mailjet] Unknown event #{params['event']} for User #{self.inspect} -- DUMP #{params.inspect}"
     end
-       
+  end
 end
