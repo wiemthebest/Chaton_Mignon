@@ -37,7 +37,7 @@ images_array = ["https://64.media.tumblr.com/8aca17fe8dcff29d780283bd698e21b3/tu
 end
 puts "  Done"
 puts "user a été creer"
-test_user = User.create!(email: 'test@example.com', password: "password", password_confirmation: "password")
+test_user = User.create!(email: 'hareish3@example.com', password: "password", password_confirmation: "password")
 puts "  Done. Use 'test@example.com' as login and 'password' as password"
 puts "admin user a été creer"
 admin_user = User.create!(email: 'super_test_admin@amazing.com', password: "thatstrulyincredible", password_confirmation: "thatstrulyincredible", admin: true)
