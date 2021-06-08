@@ -14,6 +14,8 @@
 
 require  'faker'
 
+Faker::Config.locale = 'fr'
+
 Item.destroy_all
 User.destroy_all
 Cart.destroy_all
