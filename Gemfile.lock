@@ -6,6 +6,15 @@ GIT
     faker (2.18.0)
       i18n (>= 1.6, < 2)
 
+GIT
+  remote: https://github.com/mailjet/mailjet-gem.git
+  revision: 675f75f5e402632f4d6a0ab017b680c752fa9ff9
+  specs:
+    mailjet (1.6.0)
+      activesupport (>= 3.1.0)
+      rack (>= 1.4.0)
+      rest-client (>= 2.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -148,10 +157,6 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
-    mailjet (1.6.0)
-      activesupport (>= 3.1.0)
-      rack (>= 1.4.0)
-      rest-client (>= 2.0.0)
     marcel (1.0.1)
     method_source (1.0.0)
     mime-types (3.3.1)
@@ -296,7 +301,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   letter_opener
   listen (>= 3.0.5, < 3.2)
-  mailjet
+  mailjet!
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
   rails (~> 5.2.6, >= 5.2.6)
@@ -315,4 +320,4 @@ RUBY VERSION
    ruby 2.7.1p83
 
 BUNDLED WITH
-   2.2.16
+   2.2.19
