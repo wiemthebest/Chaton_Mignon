@@ -5,9 +5,9 @@
     <div class="col-md-4">
       <h2><%= item.title %></h2>
       <p><%= truncate(item.description, length: 250) %> </p>
-      <p><%= item.price %></p>
+      <p><%= item.price %>€</p>
       <img src="<%= item.image_url %>"/>
-      <p><%= link_to "Voir plus", items_path(item.id), :class => "btn btn-secondary" %></p>
+      <p><%= link_to "Voir plus", item_path(item.id), :class => "btn btn-secondary" %></p>
     </div>
   <% end %>
 </div>
