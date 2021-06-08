@@ -1,6 +1,10 @@
 class Item < ApplicationRecord
-      has_many :cart_items
+  validates :title, presence: true, length: {in: 2..25}
+  validates :description, presence: true, length: {in: 12..700}
+  validates :image_url, presence: true
+  validates :price, presence: true, numericality: { greater_than: 0}
   has_many :carts, through: :cart_items
+  has_many :cart_items
 end
 
 #une instance du model cart sera liée forcément à un user 
