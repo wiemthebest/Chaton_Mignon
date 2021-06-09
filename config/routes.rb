@@ -6,6 +6,7 @@ root 'items#index'
   resources :items
   resources :carts, only: [:create, :update, :destroy, :show]
   resources :orders, only: [:new, :create, :destroy, :show]
+  resources :cart_items
   get 'static_pages/contact'
 
 
