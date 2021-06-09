@@ -6,10 +6,6 @@ class Item < ApplicationRecord
   has_many :carts, through: :cart_items
   has_many :cart_items, dependent: :nullify
 
-  composed_of :price,
-              :class_name => 'Money',
-              :mapping => %w(price cents),
-              :converter => Item.new { |value| Money.new(value) }
 
 end
 
