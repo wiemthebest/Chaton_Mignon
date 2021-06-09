@@ -77,16 +77,19 @@
   </div>
 </section>
 
-<h1>Listes des chats</h1>
+<h2>Listes des chats</h2>
 <div class="container">
 <div class="row">
   <% @items.each do |item| %>
-    <div class="col-md-4">
-      <h2><%= item.title %></h2>
-      <p><%= truncate(item.description, length: 250) %> </p>
-      <p><%= item.price %>€</p>
-      <img src="<%= item.image_url %>"/>
-      <p><%= link_to "Voir plus", item_path(item.id), :class => "btn btn-secondary" %></p>
+    <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
+    <div class="block2">
+    <div class="block2-pic hov-img0"><img src="<%= item.image_url %>"/></div>
+    <div class="block2-txt p-t-14">
+    <p><%= link_to item.title, item_path(item.id), :class => "stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6" %></p>
+    <p class="stext-105 cl3"><%= item.price %>€</p>
+     
+      </div>
+    </div>
     </div>
   <% end %>
 </div>
