@@ -1,0 +1,18 @@
+<h1>Page Profil</h2>
+
+<p>Bienvenue sur la page d'ajout d'un avatar pour l'Utilisateur portant l'identifiant : <%= @user.id %></p>
+<!--faire un avatar ou le modifier-->
+<h3>Avatar actuel</h3>
+
+<% if @user.avatar.attached? %>
+  <%= image_tag @user.avatar, alt: 'avatar' %>
+<% else %>
+  <p> Il n'y a pas encore d'avatar lié à cet Utilisateur </p>
+<% end %>
+
+<h3>Changer d'avatar ?</h3>
+
+<%= form_tag user_avatar_path(@user), multipart: true do %>
+  <%= file_field_tag :avatar %>
+  <%= submit_tag "mettre à jour" %>
+<% end %>
