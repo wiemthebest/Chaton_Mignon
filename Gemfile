@@ -73,3 +73,6 @@ gem 'administrate'
 gem 'monetize'
 gem 'currencies'
 gem 'better_errors'
+gem 'bootstrap', '~> 4.1.3'
+gem "font-awesome-rails"
+gem 'jquery-rails'
