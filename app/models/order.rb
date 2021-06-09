@@ -1,6 +1,7 @@
 class Order < ApplicationRecord
-    belongs_to :order
+  belongs_to :order
   belongs_to :item
+
 end
 
 #Pour enregistrer toutes les commandes en base, 

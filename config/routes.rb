@@ -9,10 +9,11 @@ root 'items#index'
   resources :carts, only: [:create, :update, :destroy, :show]
   resources :orders, only: [:new, :create, :destroy, :show]
   resources :cart_items
+
+  resources :users, only: [:show] do
+    resources :avatars, only: [:create]
+  end
+  
   get 'static_pages/contact'
-
-
-
-
 
 end
