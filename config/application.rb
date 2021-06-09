@@ -10,7 +10,7 @@ module ChatonMignon
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
-
+    config.assets.precompile << %w( *.scss *.js )
     # Settings in config/environments/* take precedence over those specified here.
     config.middleware.use Mailjet::Rack::Endpoint, '/mailjet/callback' do |params|  # using the same URL you just set in Mailjet's administration
 
