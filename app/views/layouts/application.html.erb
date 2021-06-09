@@ -8,8 +8,16 @@
         <link rel="icon" type="image/png" href="images/icons/favicon.png"/>
 
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+       
+      
+        <%= stylesheet_link_tag 'util.css', media: 'all' %>
+        <%= stylesheet_link_tag 'main.css', media: 'all' %>
+
+        
+
 
         <%= stylesheet_link_tag 'bootstrap-grid.css', media: 'all' %>
+        <%= stylesheet_link_tag 'animate.css', media: 'all' %>
         <%= stylesheet_link_tag 'material-design-iconic-font.css', media: 'all' %>
         <%= stylesheet_link_tag 'linearicons-v1.0.0/icon-font.min.css', media: 'all' %>
         <%= stylesheet_link_tag 'animate.css', media: 'all' %>
@@ -19,18 +27,19 @@
         <%= stylesheet_link_tag 'magnific-popup.css', media: 'all' %>
         <%= stylesheet_link_tag 'perfect-scrollbar.css', media: 'all' %>
         <%= stylesheet_link_tag 'slick.css', media: 'all' %>
-        <%= stylesheet_link_tag 'util.css', media: 'all' %>
-        <%= stylesheet_link_tag 'main.css', media: 'all' %>
 
-
+    
       <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
+      
+      <%= javascript_include_tag 'bootstrap.js', 'data-turbolinks-track': 'reload' %>
       <%= javascript_include_tag 'animsition.js', 'data-turbolinks-track': 'reload' %>
       <%= javascript_include_tag 'select2.js', 'data-turbolinks-track': 'reload' %>
       <%= javascript_include_tag 'perfect-scrollbar.min.js', 'data-turbolinks-track': 'reload' %>
       <%= javascript_include_tag 'jquery.magnific-popup.min.js', 'data-turbolinks-track': 'reload' %>
       <%= javascript_include_tag 'slick.js', 'data-turbolinks-track': 'reload' %>
       <%= javascript_include_tag 'slick-custom.js', 'data-turbolinks-track': 'reload' %>
+       <%= javascript_include_tag 'map-custom.js', 'data-turbolinks-track': 'reload' %>
       <%= javascript_include_tag 'main.js', 'data-turbolinks-track': 'reload' %>
       
     </head>
