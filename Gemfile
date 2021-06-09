@@ -66,13 +66,13 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
+gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'table_print'
 gem 'mailjet', :git => 'https://github.com/mailjet/mailjet-gem.git'
 gem 'administrate'
 gem 'monetize'
 gem 'currencies'
 gem 'better_errors'
-gem 'bootstrap', '~> 4.1.3'
+gem 'bootstrap', '~> 5.0.1'
 gem "font-awesome-rails", '~> 4.5'
 gem 'jquery-rails'

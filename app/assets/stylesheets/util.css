@@ -28,7 +28,15 @@ a:hover {text-decoration: none;}
 
 /*---------------------------------------------*/
 h1,h2,h3,h4,h5,h6,p {margin: 0px;}
-
+h2{
+	font-size: 6rem;
+    font-weight: 300;
+    line-height: 1.1;
+	padding-right: 0;
+    padding-left: 0;
+    border-radius: 0;
+	text-align: center!important;
+}
 ul, li {
 	margin: 0px;
 	list-style-type: none;

@@ -96,7 +96,9 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   font-family: Montserrat-Bold;
   src: url('../fonts/Montserrat/Montserrat-Bold.ttf'); 
 }
-
+article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
 
 /*//////////////////////////////////////////////////////////////////
 [ RS PLUGIN ]*/
