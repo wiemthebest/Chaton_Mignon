@@ -1,0 +1,15 @@
+<div class="container text-center">
+   <h2 class="p-4"> <%= @item.title %> </h2>
+
+   <%if @item.image_url?%> <%= image_tag @item.image_url, alt: @item.title %> <% end %>
+   <p><%= truncate(@item.description, length: 250) %> </p>
+   <p><%= @item.price %>€</p>
+  
+  <div class=card-footer text-center font-weight-bold>
+    <%= number_to_currency item.price, unit: "€", separation: ",", format:"%n %u" %>
+    <%= button_to "Ajouter au panier", cart_items_path(item_id: item), class "btn btn-primary" %>
+  </div>
+
+</div>
+
+
