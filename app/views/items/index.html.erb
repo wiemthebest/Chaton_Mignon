@@ -1,0 +1,17 @@
+<h1>Listes des chats</h1>
+<div class="container">
+<div class="row">
+  <% @items.each do |item| %>
+    <div class="col-md-4">
+      <h2><%= item.title %></h2>
+      <p><%= truncate(item.description, length: 250) %> </p>
+      <p><%= item.price %>€</p>
+      <img src="<%= item.image_url %>"/>
+      <p><%= link_to "Voir plus", item_path(item.id), :class => "btn btn-secondary" %></p>
+    </div>
+  <% end %>
+</div>
+
+  <hr>
+
+</div> 
