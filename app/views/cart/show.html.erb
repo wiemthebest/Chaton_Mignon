@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<h2>Panier</h2>
+
+<ul>
+  <% @cart.cart_items.each do |item| %>
+    <li><%= item.item.title%> (x <%= item.quantity %>)</li>
+  <% end %>
+</ul>
+
+<p><%= link_to "Retour aux produits", root_path %></p>
