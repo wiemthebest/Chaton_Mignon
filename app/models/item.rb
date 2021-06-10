@@ -1,11 +1,11 @@
 class Item < ApplicationRecord
-  has_many :carts, through: :cart_items
-  has_many :cart_items, dependent: :nullify
+  has_many :carts, through: :line_items
+  has_many :line_items, dependent: :nullify
 
   validates :title, uniqueness: {case_sensitive: false} , presence: true, length: {in: 2..25}
   validates :description, presence: true, length: {in: 12..700}
   validates :price, presence: true, numericality: { greater_than: 0}
-  validates :image_url, presence: true, format: { with: /\.(jpg|png|gif)\z/i, message:"doit être en format jpg, png ou gif"}, allow_blank: true
+  validates :image_url, presence: true, format: { with: /\.(jpg|jpeg|png|gif)\z/i, message:"doit être en format jpg, png ou gif"}, allow_blank: true
   
 
 end

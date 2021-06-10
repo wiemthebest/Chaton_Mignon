@@ -19,9 +19,10 @@ Faker::Config.locale = 'fr'
 Item.destroy_all
 User.destroy_all
 Cart.destroy_all
+LineItem.destroy_all
 Order.destroy_all
 OrderItem.destroy_all
-CartItem.destroy_all
+
 
 puts "créer 20 items..."
 images_array = ["https://64.media.tumblr.com/8aca17fe8dcff29d780283bd698e21b3/tumblr_no1bkiklDH1qbjrrso1_640.jpg",
@@ -34,20 +35,20 @@ images_array = ["https://64.media.tumblr.com/8aca17fe8dcff29d780283bd698e21b3/tu
 "https://www.leparisien.fr/resizer/dxeKDoZ9oIMydrKE4h3nzeFb0CM=/932x582/cloudfront-eu-central-1.images.arcpublishing.com/leparisien/KIOHEM7YJBRED3P2P5FBOREIIM.jpg",
 
 ]
-9.times do |i|
-  item = Item.create!(title: Faker::Creature::Cat.name, description: Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false), price: Faker::Number.decimal(l_digits: 2), image_url: images_array[i-1])
+8.times do |i|
+  item = Item.create!(title: Faker::Creature::Cat.unique.name, description: Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false), price: Faker::Number.decimal(l_digits: 2), image_url: images_array[i-1])
 end
 puts "  Done"
 puts "user a été creer"
-test_user = User.create!(email: 'test@example.com', password: "password", password_confirmation: "password")
+test_user = User.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: 'test@example.com', password: "password", password_confirmation: "password")
 puts "  Done. Use 'test@example.com' as login and 'password' as password"
 puts "admin user a été creer"
 admin_user = User.create!(email: 'super_test_admin@amazing.com', password: "thatstrulyincredible", password_confirmation: "thatstrulyincredible", admin: true)
-admin_cart = Cart.create!(user: admin_user)
+#admin_cart = Cart.create!(user: admin_user)
 puts "  Done"
 puts "carte a été associé a un user"
-test_cart = Cart.create!(user: test_user)
+#test_cart = Cart.create!(user: test_user)
 puts "  Done"
 puts "mettre les cartes dans un user carte"
-test_cart.items.push(Item.all.last)
+#test_cart.items.push(Item.all.last)
 puts "  Done"
