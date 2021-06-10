@@ -34,6 +34,8 @@ images_array = ["https://64.media.tumblr.com/8aca17fe8dcff29d780283bd698e21b3/tu
 "https://www.leparisien.fr/resizer/dxeKDoZ9oIMydrKE4h3nzeFb0CM=/932x582/cloudfront-eu-central-1.images.arcpublishing.com/leparisien/KIOHEM7YJBRED3P2P5FBOREIIM.jpg",
 
 ]
+
+
 9.times do |i|
   item = Item.create!(title: Faker::Creature::Cat.name, description: Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false), price: Faker::Number.decimal(l_digits: 2), image_url: images_array[i-1])
 end
