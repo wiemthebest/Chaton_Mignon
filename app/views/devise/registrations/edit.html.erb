@@ -1,5 +1,15 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url(<%= asset_path( 'Chat_22.jpg' ) %>);">
+  <h2 class="ltext-105 cl0 txt-center">
+    <br>
+  Modifier ses données
+  </h2>
+</section>
 
+<br>
+
+<div class="container">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="light-well">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
