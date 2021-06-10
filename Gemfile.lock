@@ -392,11 +392,8 @@ DEPENDENCIES
   devise
   dotenv-rails
   faker!
-
-  google-cloud-storage
-
   font-awesome-rails (~> 4.5)
-
+  google-cloud-storage
   jbuilder (~> 2.5)
   jquery-rails
   letter_opener
@@ -422,4 +419,4 @@ RUBY VERSION
    ruby 2.7.1p83
 
 BUNDLED WITH
-   2.2.16
+   2.2.19

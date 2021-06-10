@@ -1,7 +1,12 @@
 class CreateOrders < ActiveRecord::Migration[5.2]
   def change
     create_table :orders do |t|
-      t.belongs_to :user, index: true
+      t.references :users, foreign_key: true
+      t.string :name, null: false
+      t.text :address, null: false
+      t.string :email, null: false
+      t.integer :status, null: false, default: 0
+      t.references :carts, foreign_key: true
       # cette table qui fait le lien avec user 
       t.timestamps
     end
