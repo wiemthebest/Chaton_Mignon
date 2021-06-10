@@ -71,6 +71,10 @@ ActiveRecord::Schema.define(version: 2021_06_10_165833) do
 
   create_table "orders", force: :cascade do |t|
     t.bigint "user_id"
+    t.string "name", null: false
+    t.text "address", null: false
+    t.string "email", null: false
+    t.integer "status", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_orders_on_user_id"
@@ -87,8 +91,6 @@ ActiveRecord::Schema.define(version: 2021_06_10_165833) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "admin", default: false
-    t.string "first_name"
-    t.string "last_name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -96,4 +98,5 @@ ActiveRecord::Schema.define(version: 2021_06_10_165833) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "line_items", "carts"
   add_foreign_key "line_items", "items"
+  add_foreign_key "orders", "users"
 end

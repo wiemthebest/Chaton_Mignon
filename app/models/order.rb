@@ -1,6 +1,5 @@
 class Order < ApplicationRecord
-  belongs_to :cart
-  belongs_to :item
+  belongs_to :user
 
   enum status: [:ordered, :payed, :in_progress, :sent]
 
