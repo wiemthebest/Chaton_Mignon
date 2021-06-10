@@ -2,6 +2,7 @@
 
 ## Bienvenue !
 Ceci est un projet qui a duré plusieurs jours... 🤯
+
 Le projet, nous avons créer une boutique en ligne, pour un magasin de photos de chatons. La boutique va afficher les différents produits, puis les clients pourront s'inscrire, remplir leur panier, et payer l'objet avec Stripe pour le recevoir par email.
 
 ## La version minimaliste du site est la suivante :
