@@ -21,11 +21,11 @@ Une fois que le MVP est sorti et fonctionnel, déjà vous pouvez vous féliciter
 - http://localhost:3000/
 
 # LA TEAM
-_Wiem_
-_Célia_
-_Nelly_
-_Flora_
-_Hareish_
+- _Wiem_
+- _Célia_
+- _Nelly_
+- _Flora_
+- _Hareish_
 
 🙂
 
