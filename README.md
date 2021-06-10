@@ -16,9 +16,9 @@ Une fois que le MVP est sorti et fonctionnel, déjà vous pouvez vous féliciter
 
 ## Lien
 
-https://git.heroku.com/cat-kitten939495.git
-https://cat-kitten939495.herokuapp.com/
-http://localhost:3000/
+- https://git.heroku.com/cat-kitten939495.git
+- https://cat-kitten939495.herokuapp.com/
+- http://localhost:3000/
 
 # LA TEAM
 _Wiem_
