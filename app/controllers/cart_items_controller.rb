@@ -39,9 +39,6 @@ class CartItemsController < ApplicationController
 
   private
 
-  def set_cart
-    @cart = Cart.find(params[:id])
-  end
   
   def post_params
     post_params = params.require(:item).permit(:title, :price)
