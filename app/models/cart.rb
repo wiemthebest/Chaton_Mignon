@@ -3,7 +3,7 @@ class Cart < ApplicationRecord
   has_many :cart_items, dependent: :destroy
   has_many :items, through: :cart_items
 
-  def add_product(product)
+  def add_item(item)
     item = cart_items.find_by(item: item)
 
     if item

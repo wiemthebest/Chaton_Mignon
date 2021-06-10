@@ -87,7 +87,11 @@
     <div class="block2-txt p-t-14">
     <p><%= link_to item.title, item_path(item.id), :class => "stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6" %></p>
     <p class="stext-105 cl3"><%= item.price %>€</p>
-     
+    
+      </div>
+      <div class="card-footer text-center font-weight-bold">
+        <%= number_to_currency product.price, unit: "€", separator: ",", format: "%n %u" %>
+        <%= button_to "Ajouter au panier", cart_items_path(item_id: item), class "btn btn-primary", remote: true %>
       </div>
     </div>
     </div>
