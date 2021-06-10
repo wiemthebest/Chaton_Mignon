@@ -18,7 +18,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 
 gem 'stripe'
-
+gem 'stripe-rails'
+gem 'whenever', require: false
 gem 'devise'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -77,3 +78,4 @@ gem 'better_errors'
 gem 'bootstrap', '~> 5.0.1'
 gem "font-awesome-rails", '~> 4.5'
 gem 'jquery-rails'
+gem 'money-rails'
