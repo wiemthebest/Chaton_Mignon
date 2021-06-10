@@ -1,26 +1,45 @@
-<h2>Log in</h2>
+<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url(<%= asset_path( 'Chat_22.jpg' ) %>);">
+  <h2 class="ltext-105 cl0 txt-center">
+    <br>
+    Connection
+  </h2>
+</section>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+<br>
+<center>
+<div class="container">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="light-well">
+        <%= form_for resource, as: resource_name, url: session_path(resource_name),
+                      html: { class: "form-horizontal center"} do |f| %>
+          <div class="form-group">
+            <%= f.email_field :email, autofocus: true, placeholder: "Email Address", class: "form-control" %>
+          </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
+          <div class="form-group">
+            <%= f.password_field :password, autocomplete: "off", placeholder: "Password", class: "form-control" %>
+          </div>
+<br>
+          <% if devise_mapping.rememberable? -%>
+            <div class="form-group">
+              <div class="col-sm-10">
+                <div class="checkbox">
+                  <label>
+                    <%= f.check_box :remember_me %> Remember me
+                  </label>
+                </div>
+              </div>
+            </div>
+          <% end -%>
 
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+          <div class="actions">
+            <%= f.submit "Log in", class: "btn btn-success btn-lg btn-block" %>
+          </div>
+        <% end %>
+      <br>
+      <br>
+      <%= render "devise/shared/links" %>
     </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in", :class =>  'btn btn-primary' %>
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
+</center>
