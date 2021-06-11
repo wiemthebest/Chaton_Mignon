@@ -13,7 +13,7 @@
 
                     <% if user_signed_in? %>
                         <%= link_to "Mon Compte", user_path(current_user.id), class: "flex-c-m trans-04 p-lr-25" %>
-                        <%= link_to "Déconnexion", destroy_user_session_path, class: "flex-c-m trans-04 p-lr-25" %>
+                        <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, class: "flex-c-m trans-04 p-lr-25" %>
                     <% else %>
                         <%= link_to "Connexion", new_user_session_path, :class => "flex-c-m trans-04 p-lr-25" %>
                         <%= link_to "Inscription", new_user_registration_path, :class => "flex-c-m trans-04 p-lr-25" %>
