@@ -19,7 +19,7 @@
         <%= stylesheet_link_tag 'bootstrap-grid.css', media: 'all' %>
         <%= stylesheet_link_tag 'animate.css', media: 'all' %>
         <%= stylesheet_link_tag 'material-design-iconic-font.css', media: 'all' %>
-        <%= stylesheet_link_tag 'linearicons-v1.0.0/icon-font.min.css', media: 'all' %>
+        <%= stylesheet_link_tag 'icon-font.min.css', media: 'all' %>
         <%= stylesheet_link_tag 'animate.css', media: 'all' %>
         <%= stylesheet_link_tag 'hamburgers.css', media: 'all' %>
         <%= stylesheet_link_tag 'animsition.css', media: 'all' %>
@@ -47,8 +47,11 @@
 
       <%= render 'layouts/navbar'%>
       <%= render 'layouts/cart'%>
+      <div class="container">
+      <p id="alert"><%= alert %></p>
       <%= yield %>
-  
+      </div>
+      <br/>
       <%= render 'layouts/footer'%>
 
     <script>

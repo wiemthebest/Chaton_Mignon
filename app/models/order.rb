@@ -1,7 +1,10 @@
 class Order < ApplicationRecord
-  belongs_to :order
-  belongs_to :item
+  belongs_to :user
 
+  enum status: [:ordered, :payed, :in_progress, :sent]
+
+  validates :name, :address, :email, presence: true
+  validates :status, inclusion: statuses.keys
 end
 
 #Pour enregistrer toutes les commandes en base, 

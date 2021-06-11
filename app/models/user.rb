@@ -10,6 +10,9 @@ class User < ApplicationRecord
 
  after_create :welcome_send
 
+  def name
+     return "#{self.first_name} #{self.last_name}"
+  end
   def welcome_send
     UserMailer.welcome_email(self).deliver_now
   end

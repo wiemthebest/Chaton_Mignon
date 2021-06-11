@@ -1,15 +1,28 @@
 <div class="container text-center">
-   <h2 class="p-4"> <%= @item.title %> </h2>
-
-   <%if @item.image_url?%> <%= image_tag @item.image_url, alt: @item.title %> <% end %>
-   <p><%= truncate(@item.description, length: 250) %> </p>
-   <p><%= @item.price %>€</p>
+  <div class="row">
+<div class="col-md-6 col-lg-7 p-b-30">
+   <div class="wrap-pic-w pos-relative"><%if @item.image_url?%> <%= image_tag @item.image_url, alt: @item.title %> <% end %>
+   </div>
+   </div>
+  <div class="col-md-6 col-lg-5 p-b-30">
+  <h4 class="mtext-105 cl2 js-name-detail p-b-14"> <%= @item.title %> </h2>
+   <p class="stext-102 cl3 p-t-23"><%= truncate(@item.description, length: 250) %> </p>
   
-  <div class=card-footer text-center font-weight-bold>
-    <%= number_to_currency item.price, unit: "€", separation: ",", format:"%n %u" %>
-    <%= button_to "Ajouter au panier", cart_items_path(item_id: item), class "btn btn-primary" %>
-  </div>
+    <span class="mtext-106 cl2"><%= number_to_currency @item.price, unit: "€", separation: ",", format:"%n %u" %></span>
+    <div class="wrap-num-product flex-w m-r-20 m-tb-10">
+										<div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
+											<i class="fs-16 zmdi zmdi-minus"></i>
+										</div>
 
+										<input class="mtext-104 cl3 txt-center num-product" type="number" name="num-product" value="1">
+
+										<div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
+											<i class="fs-16 zmdi zmdi-plus"></i>
+										</div>
+									</div>
+                  
+                  <%= button_to "Ajouter au panier", line_items_path(item_id: @item), :class => "flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail" %>
+</div>
 </div>
 
 
